@@ -21,6 +21,16 @@ model = LinearRegression()
 
 model.fit(X, Y)
 
+equation = "f(x) = {K}*x + {B}".format(
+    K=model.coef_[0][0], B=model.intercept_[0])
+
+correlation_coef = raw_data[result_column].corr(
+    raw_data[dependency_one_column])
+
+print("Equation:" + equation)
+print("Correlation coefficient: {C}".format(C=correlation_coef))
+
+
 plt.plot(X, model.predict(X), color='red', linewidth=3)
 plt.scatter(dependency_one_column_value, result_column_value, alpha=0.5)
 
