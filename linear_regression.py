@@ -17,8 +17,8 @@ def get_equation(model):
 
 
 def get_correlation_coef(data):
-    return "{C}".format(C=data[consts.result_column].corr(
-        data[consts.dependency_one_column]))
+    return "{C}".format(C=data[consts.Y_COLUMN].corr(
+        data[consts.X_COLUMN]))
 
 
 def print_result(model, data, X, Y):
