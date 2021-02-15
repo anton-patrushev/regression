@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 import consts
 import linear_regression
-# import polynomial_regression
+import polynomial_regression
 
 
 def read_data():
@@ -20,8 +20,8 @@ def main():
 
     linear_regression.build_linear_regression(data, X, Y)
 
-    # polynomial_regression.build_polynomial_regression(
-    #     dependency_one_column_value.to_numpy(), result_column_value.to_numpy())
+    polynomial_regression.build_polynomial_regression(
+        data[consts.X_COLUMN], data[consts.Y_COLUMN])
 
     return 0
 
